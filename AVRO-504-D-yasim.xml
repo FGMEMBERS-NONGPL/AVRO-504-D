@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- AVRO-504-D:
+
+            source : http://en.wikipedia.org/wiki/AVRO_504
+                 
+     Wingspan      : 43 ft 7 3/4 in ( 13.30 m  )
+     Length        : 27 ft 4     in (  8.33 m  )
+     Height        :  9 ft 1 1/2 in (  3.01 m  )
+     Empty weight  : 1390 lb        (   630 kg )
+     Engine        : 1 LeRhone 9C ( 80 H.P.)
+     Maximum speed : 82 kt       ( 121 km/h )
+     Cruise speed  : 76 kt       (  97 km/h )
+-->
+
+<airplane mass="1190" >
+
+  <approach speed="36" aoa="4">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.18"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/> <!-- Ground adjustment only -->
+  </approach>
+  
+  <cruise speed="83" alt="5000">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.90" />
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.85" /> <!-- Ground adjustment only -->
+  </cruise>
+
+  <cockpit x="-0.075" y="0" z="1.125"/>
+
+ <fuselage ax="2.071" ay="0" az="0.03628" bx="-1.583" by="0" bz="0.03628" width="0.710" taper="0.60" midpoint="1"/>
+  <fuselage ax="-1.583" ay="0" az="0.03628" bx="-0.972" by="0" bz="0.095" width="0.710" taper="0.39" midpoint="0.5" cy="1.59" cz="1.45"/>
+  <fuselage ax="-0.972" ay="0" az="0.095" bx="-6.0004" by="0" bz="0.142" width="0.710" taper="0.19" midpoint="0" cy="2.69" cz="1.845"/>
+
+    <!-- Wing up -->
+  <wing x="0.3479" y="0.0" z="1.176" 
+        chord="1.53" 
+        length="5.4" 
+        taper="1"
+        incidence="2.5"
+        twist="-1.2"
+        dihedral="4" 
+        camber="0.125">
+        <stall aoa="12" width="3.0" peak="1.35"/>
+        <flap1 start="0.495" end="1" lift="1.25" drag="1.21"/>
+      
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+      
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+  </wing>
+
+  <!-- Wing down -->
+  <mstab x="0.04516" y="0.42" z="-0.4439" 
+        chord="1.342" 
+        length="4.872" 
+        taper="1" 
+        incidence="2.5"
+        twist="-1.2"
+        dihedral="4"
+        camber="0.125">
+        <stall aoa="12" width="3.0" peak="1.35"/>
+        <flap1 start="0.495" end="1" lift="1.25" drag="1.21"/>
+     <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+      
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+  </mstab>
+
+    <hstab x="-5.972" y="0.0" z="0.126" 
+	   chord="1.43" 
+	   length="1.55" 
+         taper="1"
+         incidence="0.75"
+         effectiveness="1.5"
+         camber="0.002"> 
+         <stall aoa="17" width="4" peak="2.0"/>
+         <flap0 start="0" end="1" lift="1.57" drag="1.22"/>
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+ <!-- fin-rudder -->
+
+  <vstab x="-6.22" y="0" z="0.555" 
+	  chord="1.186" 
+	  length="1.234" 
+        taper="0.64"
+        effectiveness="1.54" 
+	  sweep="0">
+       <stall aoa="20" width="3" peak="1.5"/>
+       <flap0 start="0" end="1" lift="1.36" drag="1.22"/>
+         <control-input axis="/controls/flight/rudder" square="true" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+  </vstab>
+
+    <!-- Engines      : Lerhone-9C
+
+       Informations : http://en.wikipedia.org/wiki/Le_Rhone_9C
+
+       General characteristics
+
+    Type: Nine-cylinder, single-row rotary engine
+    Bore: 105 mm (4.13 in)
+    Stroke: 140 mm (5.51 in)
+    Displacement: 10.89 L (664.47 cu in)
+    Diameter: 94.5 cm (37.2 in)
+    Dry weight: 121.5 kg (268 lb)
+
+Components
+
+    Valvetrain: Cam-operated single rocker for both inlet and exhaust valves
+    Oil system: Castor oil, total loss
+    Cooling system: Air-cooled
+
+Performance
+
+    Power output: 92 hp (68.6 kW) at 1,300 rpm (maximum)
+    Compression ratio: 4.5:1
+  
+  -->
+  <propeller x="1.875" y="0.0" z=" 0.1533"  
+             radius="1.215"
+             mass="253"       
+             moment="24"
+             blades="2"
+             cruise-power="78"
+             cruise-alt="5000" 
+             cruise-speed="83"
+             cruise-rpm="1180"
+             gear-ratio="1.0"
+             takeoff-power="80"
+             takeoff-rpm="1200">
+             <actionpt x="2.159" y="0" z="0.1533"/>
+             <piston-engine eng-rpm="1200"  
+                            alt="5000" 
+                            eng-power="80"
+                            bore="4.13"
+                            stroke="5.51"
+                            compression-ratio="4.5"
+                            min-throttle="0.055"
+                            displacement="664.3"/>
+             <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
+             <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
+             <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
+             <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/> 
+
+  </propeller>
+
+ <!-- Left wheel -->
+  <gear x="0.76" y="0.74" z="-1.5746" 
+        compression="0.105" 
+        spring="0.88" 
+        damp="0.3" 
+        on-solid="1" >
+        <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+  <!-- Right wheel -->
+  <gear x="0.76" y="-0.74" z="-1.5746" 
+        compression="0.105" 
+        spring="0.88"
+        damp="0.3" 
+        on-solid="1" >
+        <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+   <!-- nose skid -->
+  <gear x="2.436" y="0" z="-1.4654" 
+        compression="0.021"
+        skid="1" 
+        spring="1.68"
+        sfric="1.0"
+        dfric="1.0">
+  </gear>
+
+  <!-- Tail skid -->
+  <gear x="-5.896" y="0" z="-0.5886" 
+        compression="0.041" 
+        spring="0.68"
+        sfric="0.35"
+        dfric="0.41">
+        <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="0.25" dst1="-0.25"/>
+  </gear>
+
+
+  <!-- Fuel: Forward 142 lbs -->
+  <tank x="1.053" y="0" z="0.413" capacity="112"/>
+
+  <!-- pilot weight -->
+  <weight x="-0.552" y="0.0" z="-0.11" mass-prop="/sim/weight[0]/weight-lb"/>
+  <weight x="0.43" y="0.0" z="0.11" mass-prop="/sim/weight[1]/weight-lb"/>
+
+<!--
+  <ballast x="2.0" y="0" z="-1.90" mass="80"/>
+-->
+</airplane>
+

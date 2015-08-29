@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+
+  <!-- Fuel valve -->
+  <model>
+    <path>Aircraft/AVRO-504-D/Models/instruments/fuelvalve/fuel-valve.xml</path>
+    <offsets>
+      <x-m>  0.224 </x-m>
+      <y-m>  -0.201 </y-m>
+      <z-m>  0.307 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+    <!-- RPM -->
+  <model>
+    <path>Aircraft/AVRO-504-D/Models/instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m>  0.213 </x-m>
+      <y-m>  -0.175 </y-m>
+      <z-m>  0.533 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+ <!-- magneto switch -->
+  <model>
+    <path>Aircraft/AVRO-504-D/Models/instruments/magneto/magneto.xml</path>
+    <offsets>
+      <x-m>  0.213 </x-m>
+      <y-m>  0.16 </y-m>
+      <z-m>  0.392 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+ <!-- throttle lever and quadrant -->
+  <!-- <model>
+    <path>Aircraft/AVRO-504-D/Models/instruments/throttle/throttle.xml</path>
+    <offsets>
+      <x-m>  0.213 </x-m>
+      <y-m>  -0.270 </y-m>
+      <z-m>  0.255 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model> -->
+
+ <!-- Altitude -->
+  <model>
+    <path>Aircraft/AVRO-504-D/Models/instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.213 </x-m>
+      <y-m>  0.175 </y-m>
+      <z-m>  0.533 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Compass -->
+  <model>
+    <path>Aircraft/AVRO-504-D/Models/instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>  0.095 </x-m>
+      <y-m> -0.352 </y-m>
+      <z-m>  -0.112 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> -90.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/AVRO-504-D/Models/instruments//asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.213 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.435 </z-m>
+      <roll-deg>      0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

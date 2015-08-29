@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+   <sim include="Nasal/avro-504d-views.xml"> 
+
+   <description>AVRO-504-D</description>
+   <author>LesterBoffo FDM/3D Models/Texturing from FS-WWI artists 3DP-ArgonV</author>
+   <status>alpha</status>
+    <rating>
+    <FDM type="int">3</FDM>
+    <systems type="int">1</systems>
+    <model type="int">3</model>
+    <cockpit type="int">2</cockpit>
+  </rating>
+
+   <flight-model archive="y">yasim</flight-model>
+   <aero archive="y">AVRO-504-D-yasim</aero>
+
+   <startup>
+    <splash-texture>Aircraft/AVRO-504-D/splash.png</splash-texture>
+    <units>meters</units>
+    <fuel-fraction>0.8</fuel-fraction>
+   </startup>
+
+  <sound>
+      <path>Aircraft/AVRO-504-D/Sounds/AVRO-504-D-sound.xml</path>
+    </sound>
+
+  <model>
+   <path>Aircraft/AVRO-504-D/Models/AVRO-504-D.xml</path>
+  </model>
+
+  <submodels> 
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/AVRO-504-D/Models/Effects/guns/submodels.xml</path>
+   </submodels> 
+   
+    <menubar include="Dialogs/avro-504d-menu.xml"/> 
+
+  <!-- Payload -->
+  <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>160</weight-lb>
+      <max-lb>190</max-lb>
+      <min-lb>120</min-lb>
+  </weight> 
+
+  <weight n="1">
+      <name>Observer</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>220</max-lb>
+      <min-lb>0</min-lb>
+  </weight>
+
+ </sim>
+ 
+   <input>
+   <keyboard include="Nasal/avro-504d-keyboard.xml"/>
+  </input>
+  
+  <nasal>
+    <guns>
+      <file>Aircraft/AVRO-504-D/Nasal/weapons.nas</file>
+      <file>Aircraft/AVRO-504-D/Nasal/revi.nas</file>
+    </guns>
+  </nasal>
+
+</PropertyList>
