@@ -2,9 +2,9 @@
 
 <PropertyList>
 
-   <sim include="Nasal/avro-504d-views.xml"> 
+   <sim include="Nasal/views.xml"> 
 
-   <description>AVRO-504-D</description>
+   <description>AVRO-504-HD</description>
    <author>LesterBoffo FDM/3D Models/Texturing from FS-WWI artists 3DP-ArgonV</author>
    <status>alpha</status>
     <rating>
@@ -26,7 +26,7 @@
   </tags>
 
    <flight-model archive="y">yasim</flight-model>
-   <aero archive="y">AVRO-504-D-yasim</aero>
+   <aero archive="y">AVRO-504-hd-yasim</aero>
 
    <startup>
     <splash-title> AVRO 501D 3D model and textures from Fighter Aquadron WWI
@@ -44,7 +44,7 @@
     </sound>
 
   <model>
-   <path>Aircraft/AVRO-504-D/Models/AVRO-504-D.xml</path>
+   <path>Aircraft/AVRO-504-D/Models/home_defense/AVRO-504-hd.xml</path>
       <livery>
          <file type="string">default</file>
       </livery>
@@ -61,13 +61,6 @@
   <weight n="0">
       <name>Pilot</name>
       <weight-lb>160</weight-lb>
-      <max-lb>190</max-lb>
-      <min-lb>120</min-lb>
-  </weight> 
-
-   <weight n="1">
-      <name>Pilot</name>
-      <weight-lb>0</weight-lb>
       <max-lb>190</max-lb>
       <min-lb>120</min-lb>
   </weight> 
@@ -100,6 +93,7 @@
     <AVRO-504-D>
 	 <file>Aircraft/AVRO-504-D/Nasal/eng_coupe-utils.nas</file>
        <file>Aircraft/AVRO-504-D/Nasal/handpump.nas</file>
+       <file>Aircraft/AVRO-504-D/Nasal/turrets.nas</file>
      </AVRO-504-D>
      <liveries>
      <file>Aircraft/AVRO-504-D/Nasal/liveries.nas</file>

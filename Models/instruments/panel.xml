@@ -31,10 +31,22 @@
 
  <!-- magneto switch -->
   <model>
-    <path>Aircraft/AVRO-504-D/Models/instruments/magneto/magneto.xml</path>
+    <path>Aircraft/AVRO-504-D/Models/instruments/magneto/mag_switch_2-Y.xml</path>
     <offsets>
       <x-m>  0.213 </x-m>
       <y-m>  0.16 </y-m>
+      <z-m>  0.392 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+  
+    <model>
+    <path>Aircraft/AVRO-504-D/Models/instruments/magneto/mag_switch_1-Y.xml</path>
+    <offsets>
+      <x-m>  0.213 </x-m>
+      <y-m>  0.11 </y-m>
       <z-m>  0.392 </z-m>
       <roll-deg>    0.000 </roll-deg>
       <pitch-deg>   0.000 </pitch-deg>
@@ -83,7 +95,7 @@
 
   <!-- ASI -->
   <model>
-    <path>Aircraft/AVRO-504-D/Models/instruments//asi/asi.xml</path>
+    <path>Aircraft/AVRO-504-D/Models/instruments/asi/asi.xml</path>
     <offsets>
       <x-m>  0.213 </x-m>
       <y-m>  0.000 </y-m>

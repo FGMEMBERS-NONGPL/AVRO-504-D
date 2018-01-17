@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <path>AVRO504d.ac</path>
+  <path>AVRO504_hd.ac</path>
 
       <nasal>
     <load>
@@ -65,9 +65,7 @@
 <effect>
      <inherits-from>Effects/model-transparent</inherits-from>
       <object-name>propdisk</object-name>
-      <object-name>propblur</object-name>
        <object-name>perspex</object-name>
-       <object-name>perspex2</object-name>
     </effect>
 
   <!-- Pilot -->
@@ -75,16 +73,6 @@
     <path>Aircraft/AVRO-504-D/Models/Pilot/pilot.xml</path>
     <offsets>
       <x-m> 0.642 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.0526 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Observer -->
-    <model>
-    <path>Aircraft/AVRO-504-D/Models/Pilot/observer.xml</path>
-    <offsets>
-      <x-m> -0.293 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.0526 </z-m>
     </offsets>
@@ -148,7 +136,7 @@
     </offsets>
   </model>
   
-  <model>
+  <!-- <model>
     <path>Aircraft/AVRO-504-D/Models/Effects/guns/fire.xml</path>
     <offsets>
       <x-m> -0.89109 </x-m>
@@ -158,13 +146,13 @@
       <pitch-deg> 180 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
-  </model>
+  </model> -->
 
   <!-- Propeller -->
 
   <animation>
     <name>PropComplete</name>
-    <object-name>LeRhone-9C</object-name>
+    <object-name>LeRhone9Ja</object-name>
     <object-name>propdisk</object-name>
     <object-name>propeller</object-name>
     <object-name>prophub</object-name>
@@ -201,7 +189,7 @@
     <condition>
       <greater-than>
         <property>engines/engine[0]/rpm</property>
-        <value> 12 </value>
+        <value> 19 </value>
       </greater-than>
     </condition>
      <property>engines/engine[0]/rpm</property>
@@ -222,7 +210,6 @@
 
 	<!--  pilot's joystick -->
 	<animation>
-		<object-name>joystick1</object-name>
             <object-name>joystick2</object-name>
             <object-name>joystick-torquetube</object-name>
 		<property>controls/flight/aileron</property>
@@ -239,6 +226,7 @@
 			<z-m>-0.3761</z-m>
 		</center>
 	</animation>
+
 	<animation>
 		<object-name>joystick2</object-name>
 		<property>controls/flight/elevator</property>
@@ -257,59 +245,6 @@
 	</animation>
 
   	<!-- co-pilot's joystick -->
-
-	<animation>
-		<object-name>joystick1</object-name>
-		<property>controls/flight/elevator</property>
-		<type>rotate</type>
-		<factor>14</factor>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>-0.9199</x-m>
-			<y-m>0.0</y-m>
-			<z-m>-0.3651</z-m>
-		</center>
-	</animation>
-
- <!-- rudderbar -->
-
- <animation>
-  <type>rotate</type>
-  <object-name>rudderbar</object-name>
-  <property>controls/flight/rudder</property>
-  <factor>27</factor>
-  <center>
-   <x-m> -0.5765</x-m>
-   <y-m> 0.000</y-m>
-   <z-m>-0.402</z-m>
-  </center>
-  <axis>
-   <x>0</x>
-   <y>0</y>
-   <z>-1</z>
-  </axis>
- </animation>
-
-  <animation>
-  <type>rotate</type>
-  <object-name>rudderbar</object-name>
-  <property>controls/flight/rudder</property>
-  <factor>27</factor>
-  <center>
-   <x-m> -0.5765</x-m>
-   <y-m> 0.000</y-m>
-   <z-m>-0.402</z-m>
-  </center>
-  <axis>
-   <x>0</x>
-   <y>0</y>
-   <z>-1</z>
-  </axis>
- </animation>
 
 
 <!-- throttle -->
@@ -728,6 +663,53 @@
       <x2-m>  0.4522 </x2-m>
       <y2-m>  0.0208 </y2-m>
       <z2-m> -1.2156 </z2-m>
+    </axis>
+  </animation>
+
+    <!-- overwing gun animation -->
+  <animation>
+    <name>twinlewisturret</name>
+    <object-name>twin-lewis</object-name>
+    <object-name>drum1</object-name>
+    <object-name>drum2</object-name>
+    <object-name>ball-sight</object-name>
+    <object-name>cross-sight</object-name>
+    <object-name>fosterframe</object-name>
+  </animation>
+  
+    <animation>
+    <type>rotate</type>
+    <object-name>twinlewisturret</object-name>
+    <property>sim/model/turret[0]/pitch</property>
+    <factor>1</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m> -0.037 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  1.0306 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>twinlewisturret</object-name>
+    <property>sim/model/turret[0]/heading</property>
+    <factor>0.0</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m> -0.037 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  1.0306 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
   </animation>
 

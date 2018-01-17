@@ -2,25 +2,25 @@
 
 <!-- AVRO-504-D:
 
-            source : http://en.wikipedia.org/wiki/AVRO_504
+            source : http://en.wikipedia.org/wiki/AVRO_504 Home Defense
                  
      Wingspan      : 43 ft 7 3/4 in ( 13.30 m  )
      Length        : 27 ft 4     in (  8.33 m  )
      Height        :  9 ft 1 1/2 in (  3.01 m  )
      Empty weight  : 1390 lb        (   630 kg )
-     Engine        : 1 LeRhone 9C ( 80 H.P.)
-     Maximum speed : 82 kt       ( 121 km/h )
+     Engine        : 1 LeRhone 9J ( 130 H.P.)
+     Maximum speed : 88 kt       ( 121 km/h )
      Cruise speed  : 76 kt       (  97 km/h )
 -->
 
-<airplane mass="1190" >
+<airplane mass="1230" >
 
-  <approach speed="36" aoa="4.5">
+  <approach speed="37" aoa="4.5">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.14"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/> 
   </approach>
   
-  <cruise speed="80" alt="5000">
+  <cruise speed="84" alt="5000">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.90" />
     <control-setting axis="/controls/engines/engine[0]/mixture" value="0.85" /> <!-- Ground adjustment only -->
   </cruise>
@@ -28,8 +28,8 @@
   <cockpit x="-0.075" y="0" z="1.125"/>
 
  <fuselage ax="2.071" ay="0" az="0.03628" bx="-1.583" by="0" bz="0.03628" width="1.099" taper="0.80" midpoint="1" cx="0.87"/>
- <fuselage ax="-1.583" ay="0" az="0.03628" bx="-0.972" by="0" bz="0.095" width="0.910" taper="0.39" midpoint="0.5" cy="1.59" cz="1.45"/>
-  <fuselage ax="-0.972" ay="0" az="0.095" bx="-6.0004" by="0" bz="0.142" width="0.910" taper="0.19" midpoint="0" cy="2.69" cz="1.845"/>
+ <fuselage ax="-1.583" ay="0" az="0.03628" bx="-0.972" by="0" bz="0.095" width="0.910" taper="0.39" midpoint="0.5" cy="0.9" cz="0.95"/>
+  <fuselage ax="-0.972" ay="0" az="0.095" bx="-6.0004" by="0" bz="0.142" width="0.910" taper="0.19" midpoint="0" cy="2.19" cz="1.45"/>
 <!-- skid body -->
 <fuselage ax="2.63" ay="0" az="-1.284" bx="-0.813" by="0" bz="-1.228" width="0.109" taper="1.0" midpoint="1"/>
 
@@ -102,18 +102,18 @@
          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
   </vstab>
 
-    <!-- Engines      : Lerhone-9C
+    <!-- Engines      : Lerhone-9Ja
 
-       Informations : http://en.wikipedia.org/wiki/Le_Rhone_9C
+       Informations : http://en.wikipedia.org/wiki/Le_Rhone_9J
 
-       General characteristics
+General characteristics
 
     Type: Nine-cylinder, single-row rotary engine
-    Bore: 105 mm (4.13 in)
-    Stroke: 140 mm (5.51 in)
-    Displacement: 10.89 L (664.47 cu in)
-    Diameter: 94.5 cm (37.2 in)
-    Dry weight: 121.5 kg (268 lb)
+    Bore: 112 mm (4.41 in)
+    Stroke: 170 mm (6.63 in)
+    Displacement: 15 L (911.4 cu in)
+    Diameter: 100.5 cm (39.6 in)
+    Dry weight: 146.5 kg (323 lb)
 
 Components
 
@@ -123,31 +123,31 @@ Components
 
 Performance
 
-    Power output: 92 hp (68.6 kW) at 1,300 rpm (maximum)
-    Compression ratio: 4.5:1
+    Power output: 135 hp (100 kW) at 1,350 rpm (maximum)
+    Compression ratio: 5:1
   
   -->
   <propeller x="1.875" y="0.0" z=" 0.1533"  
-             radius="1.215"
-             mass="253"       
-             moment="24"
+             radius="1.228"
+             mass="325"       
+             moment="23"
              blades="2"
-             cruise-power="78"
+             cruise-power="118"
              cruise-alt="5000" 
-             cruise-speed="83"
-             cruise-rpm="1180"
+             cruise-speed="84"
+             cruise-rpm="1220"
              gear-ratio="1.0"
-             takeoff-power="80"
-             takeoff-rpm="1200">
+             takeoff-power="130"
+             takeoff-rpm="1280">
              <actionpt x="2.159" y="0" z="0.1533"/>
-             <piston-engine eng-rpm="1200"  
+             <piston-engine eng-rpm="1280"  
                             alt="5000" 
-                            eng-power="80"
-                            bore="4.13"
-                            stroke="5.51"
-                            compression-ratio="4.5"
+                            eng-power="130"
+                            bore="4.41"
+                            stroke="6.63"
+                            compression-ratio="5.0"
                             min-throttle="0.055"
-                            displacement="664.3"/>
+                            displacement="911.4"/>
              <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
              <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
              <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
@@ -193,14 +193,12 @@ Performance
 
 
   <!-- Fuel: Forward 142 lbs -->
-  <tank x="1.053" y="0" z="0.413" capacity="112"/>
+  <tank x="1.653" y="0" z="0.413" capacity="142"/>
 
   <!-- pilot weight -->
-  <weight x="-0.552" y="0.0" z="-0.11" mass-prop="/sim/weight[0]/weight-lb"/>
-  <weight x="0.43" y="0.0" z="0.11" mass-prop="/sim/weight[1]/weight-lb"/>
+  <weight x="-0.352" y="0.0" z="-0.11" mass-prop="/sim/weight[0]/weight-lb"/>
 
-<!--
-  <ballast x="2.0" y="0" z="-1.90" mass="80"/>
--->
+  <ballast x="1.7" y="0" z="-1.29" mass="120"/>
+
 </airplane>
 

@@ -167,7 +167,7 @@
     <stall>
       <name>stall</name>
       <mode>looped</mode>
-      <path>Aircraft/AVRO-504-D/Sounds/stall.wav</path>
+      <path>Aircraft/AVRO-504-D/Sounds/stallbuffet.wav</path>
       <condition>
         <and>
           <property>/sim/alarms/stall-warning</property>
